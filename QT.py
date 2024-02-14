@@ -28,9 +28,11 @@ line_edit.setSizePolicy(QSizePolicy.Fixed,QSizePolicy.Expanding)
 
 button = QPushButton("Hello there good sir")
 button.clicked.connect(hello)
+button.setSizePolicy(QSizePolicy.Fixed,QSizePolicy.Expanding)
 
 otherButton = QPushButton("Hello there Other person")
 otherButton.clicked.connect(hello)
+otherButton.setSizePolicy(QSizePolicy.Fixed,QSizePolicy.Expanding)
 
 #The main display
 wid = QWidget()

@@ -1,4 +1,4 @@
-from PySide6.QtWidgets import QWidget, QLineEdit, QHBoxLayout, QVBoxLayout, QLabel, QPushButton, QApplication, QSizePolicy, QMessageBox, QMainWindow, QToolBar,QPushButton,QStatusBar,QLabel
+from PySide6.QtWidgets import QWidget, QLineEdit, QHBoxLayout, QVBoxLayout, QGridLayout, QLabel, QPushButton, QApplication, QSizePolicy, QMessageBox, QMainWindow, QToolBar,QPushButton,QStatusBar,QLabel
 from PySide6.QtCore import Qt
 from PySide6.QtGui import QPixmap
 
@@ -42,13 +42,15 @@ layout.addWidget(button,3)
 layout.addWidget(otherButton,1)
 wid.setLayout(layout)
 
-
 label = QLabel("Hello There good sir how are you today?")
 label.setPixmap(QPixmap('./minions.png'))
+
 layouttwo = QHBoxLayout()
 layouttwo.addWidget(label)
 layouttwo.addWidget(line_edit)
 # layouttwo.addWidget(otherButton)
+
+grid = QGridLayout()
 
 
 layout.addLayout(layouttwo)

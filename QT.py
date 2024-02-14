@@ -43,7 +43,7 @@ layout.addWidget(otherButton,1)
 wid.setLayout(layout)
 
 label = QLabel("Hello There good sir how are you today?")
-label.setPixmap(QPixmap('./minions.png'))
+# label.setPixmap(QPixmap('./minions.png'))
 
 layouttwo = QHBoxLayout()
 layouttwo.addWidget(label)

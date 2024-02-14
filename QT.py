@@ -24,7 +24,7 @@ help.addAction("Assistance")
 window.setWindowTitle("QT Practice")
 
 line_edit = QLineEdit("Enter name here")
-line_edit.setSizePolicy(QSizePolicy.Expanding,QSizePolicy.Fixed)
+line_edit.setSizePolicy(QSizePolicy.Fixed,QSizePolicy.Expanding)
 
 button = QPushButton("Hello there good sir")
 button.clicked.connect(hello)

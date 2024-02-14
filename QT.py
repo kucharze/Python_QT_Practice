@@ -1,4 +1,4 @@
-from PySide6.QtWidgets import QWidget, QLineEdit, QHBoxLayout, QVBoxLayout, QLabel, QPushButton, QApplication, QMessageBox, QMainWindow,QToolBar,QPushButton,QStatusBar,QLabel
+from PySide6.QtWidgets import QWidget, QLineEdit, QHBoxLayout, QVBoxLayout, QLabel, QPushButton, QApplication, QSizePolicy, QMessageBox, QMainWindow, QToolBar,QPushButton,QStatusBar,QLabel
 from PySide6.QtCore import Qt
 from PySide6.QtGui import QPixmap
 
@@ -24,6 +24,7 @@ help.addAction("Assistance")
 window.setWindowTitle("QT Practice")
 
 line_edit = QLineEdit("Enter name here")
+line_edit.setSizePolicy(QSizePolicy.Expanding,QSizePolicy.Fixed)
 
 button = QPushButton("Hello there good sir")
 button.clicked.connect(hello)

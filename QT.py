@@ -7,7 +7,7 @@ app = QApplication()
 def hello():
     print("hello")
 
-#Create the display
+#Create the main window
 window = QMainWindow()
 file = window.menuBar().addMenu("File")
 file.addAction("Assist")
@@ -38,8 +38,8 @@ otherButton.setSizePolicy(QSizePolicy.Fixed,QSizePolicy.Expanding)
 wid = QWidget()
 
 layout = QVBoxLayout()
-layout.addWidget(button)
-layout.addWidget(otherButton)
+layout.addWidget(button,3)
+layout.addWidget(otherButton,1)
 wid.setLayout(layout)
 
 

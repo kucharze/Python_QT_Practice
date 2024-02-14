@@ -1,4 +1,4 @@
-from PySide6.QtWidgets import QWidget, QLineEdit, QHBoxLayout, QVBoxLayout, QLabel, QPushButton, QApplication, QMessageBox, QMainWindow,QToolBar,QPushButton,QStatusBar
+from PySide6.QtWidgets import QWidget, QLineEdit, QHBoxLayout, QVBoxLayout, QLabel, QPushButton, QApplication, QMessageBox, QMainWindow,QToolBar,QPushButton,QStatusBar,QLabel
 from PySide6.QtCore import Qt
 
 app = QApplication()
@@ -36,8 +36,17 @@ wid = QWidget()
 layout = QVBoxLayout()
 layout.addWidget(button)
 layout.addWidget(otherButton)
-layout.addWidget(line_edit)
 wid.setLayout(layout)
+
+
+label = QLabel("Hello There good sir how are you today?")
+layouttwo = QHBoxLayout()
+layouttwo.addWidget(label)
+layouttwo.addWidget(line_edit)
+# layouttwo.addWidget(otherButton)
+
+
+layout.addLayout(layouttwo)
 
 window.setCentralWidget(wid)
 window.show()

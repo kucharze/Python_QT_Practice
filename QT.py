@@ -10,6 +10,16 @@ def hello():
 window = QMainWindow()
 file = window.menuBar().addMenu("File")
 file.addAction("Assist")
+
+View = window.menuBar().addMenu("View")
+View.addAction("Assist")
+
+help = window.menuBar().addMenu("Help")
+help.addAction("Do")
+help.addAction("You")
+help.addAction("Need")
+help.addAction("Assistance")
+
 window.setWindowTitle("QT Practice")
 
 line_edit = QLineEdit("Enter name here")

@@ -61,6 +61,7 @@ button_6 = QPushButton("Six")
 button_7 = QPushButton("Seven")
 button_8 = QPushButton("Eight")
 button_9 = QPushButton("Nine")
+button_9.setSizePolicy(QSizePolicy.Expanding,QSizePolicy.Expanding)
 button_10 = QPushButton("Ten")
 
 grid = QGridLayout()

@@ -4,11 +4,19 @@ from PySide6.QtGui import QPixmap
 
 app = QApplication()
 
+window = QMainWindow()
+
 def hello():
     print("hello")
 
+def addPic():
+    print("Add pic")
+    Cardpic = QLabel("Hello There good sir how are you today?")
+    Cardpic.setPixmap(QPixmap('./2c.png'))
+    layout.addWidget(Cardpic)
+
 #Create the main window
-window = QMainWindow()
+
 file = window.menuBar().addMenu("File")
 file.addAction("Assist")
 
@@ -78,6 +86,11 @@ grid.addWidget(button_10,3,0,1,1)
 
 layout.addLayout(layouttwo)
 layout.addLayout(grid)
+
+picbut = QPushButton("Add a card pic")
+picbut.clicked.connect(addPic)
+layout.addWidget(picbut)
+
 
 window.setCentralWidget(wid)
 window.show()

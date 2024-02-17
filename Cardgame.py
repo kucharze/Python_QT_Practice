@@ -13,9 +13,15 @@ app = QApplication()
 window = QMainWindow()
 
 wid = QWidget()
-layout = QVBoxLayout()
-wid.setLayout(layout)
+Mainlayout = QVBoxLayout()
+wid.setLayout(Mainlayout)
+
+comLayout = QHBoxLayout()
+playLayout = QHBoxLayout()
+Mainlayout.addLayout(comLayout)
+Mainlayout.addLayout(playLayout)
 
 window.setCentralWidget(wid)
+window.show()
 
 app.exec()

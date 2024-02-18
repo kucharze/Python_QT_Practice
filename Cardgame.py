@@ -17,9 +17,9 @@ Mainlayout = QVBoxLayout()
 wid.setLayout(Mainlayout)
 
 comLayout = QHBoxLayout()
-Cardpic = QLabel("Hello There good sir how are you today?")
+Cardpic = QLabel("Computer")
 playLayout = QHBoxLayout()
-Cardpictwo = QLabel("Hello There good sir how are you today?")
+Cardpictwo = QLabel("Player")
 comLayout.addWidget(Cardpic)
 playLayout.addWidget(Cardpictwo)
 

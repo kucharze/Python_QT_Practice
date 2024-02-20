@@ -18,10 +18,15 @@ wid.setLayout(Mainlayout)
 
 comLayout = QHBoxLayout()
 Cardpic = QLabel("Computer")
-playLayout = QHBoxLayout()
-Cardpictwo = QLabel("Player")
 comLayout.addWidget(Cardpic)
+
+playLayout = QHBoxLayout()
+button = QPushButton("Add card")
+Cardpictwo = QLabel("Player")
+
 playLayout.addWidget(Cardpictwo)
+playLayout.addWidget(button)
+
 
 Mainlayout.addLayout(comLayout)
 Mainlayout.addLayout(playLayout)

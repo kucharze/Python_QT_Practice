@@ -2,11 +2,11 @@ from PySide6.QtWidgets import QWidget, QTabWidget, QLineEdit, QHBoxLayout, QVBox
 from PySide6.QtCore import Qt
 from PySide6.QtGui import QPixmap
 
-# def addPic():
-#     print("Add pic")
-#     Cardpic = QLabel("Hello There good sir how are you today?")
-#     Cardpic.setPixmap(QPixmap('./2c.png'))
-#     layout.addWidget(Cardpic)
+def addPic():
+    print("Add pic")
+    Cardpic = QLabel("Hello There good sir how are you today?")
+    Cardpic.setPixmap(QPixmap('./2c.png'))
+    playLayout.addWidget(Cardpic)
 
 app = QApplication()
 
@@ -22,6 +22,7 @@ comLayout.addWidget(Cardpic)
 
 playLayout = QHBoxLayout()
 button = QPushButton("Add card")
+button.clicked.connect(addPic)
 Cardpictwo = QLabel("Player")
 
 playLayout.addWidget(Cardpictwo)

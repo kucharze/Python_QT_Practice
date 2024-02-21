@@ -7,6 +7,10 @@ def addPic():
     Cardpic = QLabel("Hello There good sir how are you today?")
     Cardpic.setPixmap(QPixmap('./2c.png'))
     playLayout.addWidget(Cardpic)
+    abutton = QPushButton("Play card")
+    abutton.clicked.connect(addPic)
+    playButtonLayout.addWidget(abutton)
+
 
 app = QApplication()
 
@@ -27,11 +31,14 @@ Cardpictwo = QLabel("Player")
 
 # playLayout.addWidget(Cardpictwo)
 # playLayout.addWidget(button)
+playButtonLayout = QHBoxLayout()
+# playButtonLayout.addWidget(button)
 
 
 Mainlayout.addLayout(comLayout)
 Mainlayout.addWidget(Cardpictwo)
 Mainlayout.addLayout(playLayout)
+Mainlayout.addLayout(playButtonLayout)
 Mainlayout.addWidget(button)
 
 window.setCentralWidget(wid)

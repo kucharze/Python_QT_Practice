@@ -25,12 +25,14 @@ button = QPushButton("Add card")
 button.clicked.connect(addPic)
 Cardpictwo = QLabel("Player")
 
-playLayout.addWidget(Cardpictwo)
-playLayout.addWidget(button)
+# playLayout.addWidget(Cardpictwo)
+# playLayout.addWidget(button)
 
 
 Mainlayout.addLayout(comLayout)
+Mainlayout.addWidget(Cardpictwo)
 Mainlayout.addLayout(playLayout)
+Mainlayout.addWidget(button)
 
 window.setCentralWidget(wid)
 window.show()

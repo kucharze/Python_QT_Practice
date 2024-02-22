@@ -15,6 +15,13 @@ def addPic():
     playButtonLayout.addWidget(abutton)
 
 
+def displayPlayerHand():
+    print("Player")
+
+def displayComHand();
+    print("com")
+
+
 app = QApplication()
 
 window = QMainWindow()

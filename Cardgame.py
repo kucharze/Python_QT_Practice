@@ -7,7 +7,7 @@ comhand = []
 
 def addPic():
     print("Add pic")
-    Cardpic = QLabel("Hello There good sir how are you today?")
+    Cardpic = QLabel("")
     Cardpic.setPixmap(QPixmap('./2c.png'))
     playLayout.addWidget(Cardpic)
     abutton = QPushButton("Play card")
@@ -17,9 +17,22 @@ def addPic():
 
 def displayPlayerHand():
     print("Player")
+    for card in playerhand:
+        print(card)
+        Cardpic = QLabel("")
+        Cardpic.setPixmap(QPixmap('./2c.png'))
+        playLayout.addWidget(Cardpic)
+        abutton = QPushButton("Play card")
+        abutton.clicked.connect(addPic)
+        playButtonLayout.addWidget(abutton)
 
-def displayComHand();
+def displayComHand():
     print("com")
+    for card in comhand:
+        print(card)
+        Cardpic = QLabel("")
+        Cardpic.setPixmap(QPixmap('./2c.png'))
+        comLayout.addWidget(Cardpic)
 
 
 app = QApplication()

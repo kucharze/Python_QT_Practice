@@ -7,7 +7,13 @@ comhand = []
 
 def clearHand():
     playerhand.clear()
-    playLayout.clear()
+    while playLayout.count():
+        child = playLayout.takeAt(0)
+        childWidget = child.widget()
+        if childWidget:
+            childWidget.setParent(None)
+            childWidget.deleteLater()
+
     comhand.clear()
 
 def addPic():
@@ -22,6 +28,7 @@ def addPic():
 
 def displayPlayerHand():
     print("Player")
+    cardLayout = QVBoxLayout()
     for card in playerhand:
         print(card)
         Cardpic = QLabel("")

@@ -5,6 +5,11 @@ from PySide6.QtGui import QPixmap
 playerhand = []
 comhand = []
 
+def clearHand():
+    playerhand.clear()
+    playLayout.clear()
+    comhand.clear()
+
 def addPic():
     print("Add pic")
     Cardpic = QLabel("")
@@ -52,6 +57,9 @@ button = QPushButton("Add card")
 button.clicked.connect(addPic)
 Cardpictwo = QLabel("Player")
 
+button2 = QPushButton("Clear hand")
+button2.clicked.connect(clearHand)
+
 # playLayout.addWidget(Cardpictwo)
 # playLayout.addWidget(button)
 playButtonLayout = QHBoxLayout()
@@ -63,6 +71,7 @@ Mainlayout.addWidget(Cardpictwo)
 Mainlayout.addLayout(playLayout)
 Mainlayout.addLayout(playButtonLayout)
 Mainlayout.addWidget(button)
+Mainlayout.addWidget(button2)
 
 window.setCentralWidget(wid)
 window.show()

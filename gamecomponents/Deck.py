@@ -35,7 +35,7 @@ class Deck:
    # Shuffle the deck.
   def shuffle(self):
     #change logic to fit js loop
-    for n in range(len(self.list)): 
+    for n in range(len(self.list),1,-1): 
       # (let n = self.list.length; n >= 2; n--) :
       r = math.floor(math.random() * n)
       # Swap cards at r and n-1

@@ -1,6 +1,6 @@
 #Deck of playing cards.
 import math
-# const Card = require("./Card");
+import Card
 class Deck:
   # Instance variable:
   #   list: Deck of cards (array of Card objects)
@@ -27,7 +27,7 @@ class Deck:
     for i in range(len(suit)): #(let i = 0; i < suit.length; i++):
      
       for j in range(len(value)): # (let j = 0; j < value.length; j++):
-        # self.list.push(new Card(suit[i], value[j]));
+        self.list.push(Card(suit[i], value[j]));
         pass
       
     

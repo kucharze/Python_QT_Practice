@@ -1,5 +1,5 @@
 #Deck of playing cards.
-
+import math
 # const Card = require("./Card");
 class Deck:
   # Instance variable:
@@ -8,7 +8,7 @@ class Deck:
    # Initialize deck to represent regular 52 playing cards.
   def __init__(self):
     self.list = []
-    suit = ["c", "d", "h", "s"];
+    suit = ["c", "d", "h", "s"]
     value = [
       "2",
       "3",
@@ -33,15 +33,16 @@ class Deck:
     
   
    # Shuffle the deck.
-  def shuffle() {
-    for (let n = self.list.length; n >= 2; n--) {
-      let r = Math.floor(Math.random() * n);
-      // Swap cards at r and n-1
-      let card = self.list[r];
-      self.list[r] = self.list[n - 1];
-      self.list[n - 1] = card;
-    }
-  }
+  def shuffle(self):
+    #change logic to fit js loop
+    for n in range(len(self.list)): 
+      # (let n = self.list.length; n >= 2; n--) :
+      r = math.floor(math.random() * n)
+      # Swap cards at r and n-1
+      card = self.list[r]
+      self.list[r] = self.list[n - 1]
+      self.list[n - 1] = card
+    
     
 
    # Remove top card from the deck and return it.

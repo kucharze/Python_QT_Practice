@@ -1,7 +1,7 @@
  #A single playing card  
 class Card :  #Instance variables
-  #   suit: Suit of this card (String)
-  #   value: Numeric or face value of this card (String)
+  #   suit: Suit of self card (String)
+  #   value: Numeric or face value of self card (String)
   #   jackvalue, warvalue, svalue: value of card for given game
 
   def __init__ (self, aSuit, aValue):
@@ -17,55 +17,55 @@ class Card :  #Instance variables
     
   def setValues(self,aValue):#Used to set card values for use in certain games
     if(aValue=="k"):
-      this.jackValue=10;
-      this.sValue=13;
-      this.warValue=13;
-    }
-    else if(aValue=="j"){
-      this.jackValue=10;
-      this.sValue=11;
-      this.warValue=11;
-    }
-    else if(aValue=="q"){
-      this.jackValue=10;
-      this.sValue=12;
-      this.warValue=12;
-    }
-    else if(aValue=="a"){
-      this.jackValue=11;
-      this.sValue=1;
-      this.warValue=14;
-    }
-    else{
-      this.jackValue=aValue;
-      this.sValue=aValue;
-      this.warValue=aValue;
-    }
-  }
+      self.jackValue=10
+      self.sValue=13
+      self.warValue=13
     
-  getSuit() { return this.suit; }
-  getValue() { return this.value; }
-  getSValue(){return this.sValue;}
-  getJackValue(){return this.jackValue;}
-  getWarValue(){return this.warValue;}
+    elif(aValue=="j"):
+      self.jackValue=10
+      self.sValue=11
+      self.warValue=11
+    
+    elif(aValue=="q"):
+      self.jackValue=10
+      self.sValue=12
+      self.warValue=12
+    
+    elif(aValue=="a"):
+      self.jackValue=11
+      self.sValue=1
+      self.warValue=14
+
+    else:
+      self.jackValue=aValue
+      self.sValue=aValue
+      self.warValue=aValue
+    
+  
+    
+  getSuit() { return self.suit; }
+  getValue() { return self.value; }
+  getSValue(){return self.sValue;}
+  getJackValue(){return self.jackValue;}
+  getWarValue(){return self.warValue;}
     
   flip(){
-    this.flipped=!this.flipped;
+    self.flipped=!self.flipped;
   }
   /**
-   * Return a string representation of this card.
+   * Return a string representation of self card.
    */
   toString() {
-    return this.value + this.suit ;
+    return self.value + self.suit ;
   }
   /**
-   * Return relative URL of this card (assumes certain folder structure).
+   * Return relative URL of self card (assumes certain folder structure).
    */
   getURL() { 
-    return "../Images/" + this.toString() + ".png";
+    return "../Images/" + self.toString() + ".png";
   }
   /**
-   * Return relative URL of back of this (or any) card 
+   * Return relative URL of back of self (or any) card 
    * (assumes certain folder structure).
    */
   getBackURL() { 
@@ -73,6 +73,6 @@ class Card :  #Instance variables
   }
 }
 
-if (typeof module === "object") {
- module.exports = Card;
-}
+# if (typeof module === "object") {
+#  module.exports = Card;
+# }

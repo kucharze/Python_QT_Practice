@@ -53,7 +53,7 @@ class Card :  #Instance variables
     self.flipped = not self.flipped
   
    #Return a string representation of self card. 
-  def toString():
+  def toString(self):
     return self.value + self.suit
   
    #Return relative URL of self card (assumes certain folder structure).

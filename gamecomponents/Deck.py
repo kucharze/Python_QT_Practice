@@ -47,27 +47,27 @@ class Deck:
 
    # Remove top card from the deck and return it.
   def dealACard(self):
-    return self.list.shift();
+    return self.list.shift()
   
 
   def getSize(self):
-    return self.list.length;
+    return self.list.length
 
 
    # Determines if the deck is empty.
   def isEmpty(self):
-    return self.list.length == 0;
+    return self.list.length == 0
   
    # Adds a card to the deck.
   def addACard(self,card):
-    self.list.push(card);
+    self.list.push(card)
   
   
    # Indicate whether or not top card of deck is an 8.
    # self method is intended to be used only during game
    # initialization to avoid starting the pile with an 8.
   def isTopCardAnEight(self):
-    return self.list[0].getValue() == "8";
+    return self.list[0].getValue() == "8"
   
 
 # if (typeof module === "object") {

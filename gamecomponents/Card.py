@@ -43,35 +43,28 @@ class Card :  #Instance variables
     
   
     
-  getSuit() { return self.suit; }
-  getValue() { return self.value; }
-  getSValue(){return self.sValue;}
-  getJackValue(){return self.jackValue;}
-  getWarValue(){return self.warValue;}
+  def getSuit(self): return self.suit
+  def getValue(self): return self.value; 
+  def getSValue(self): return self.sValue
+  def getJackValue(self): return self.jackValue
+  def getWarValue(self): return self.warValue
     
-  flip(){
-    self.flipped=!self.flipped;
-  }
-  /**
-   * Return a string representation of self card.
-   */
-  toString() {
-    return self.value + self.suit ;
-  }
-  /**
-   * Return relative URL of self card (assumes certain folder structure).
-   */
-  getURL() { 
-    return "../Images/" + self.toString() + ".png";
-  }
-  /**
-   * Return relative URL of back of self (or any) card 
-   * (assumes certain folder structure).
-   */
-  getBackURL() { 
-    return "../Images/cardback.png";
-  }
-}
+  def flip(self):
+    self.flipped = not self.flipped
+  
+   #Return a string representation of self card. 
+  def toString():
+    return self.value + self.suit
+  
+   #Return relative URL of self card (assumes certain folder structure).
+  def getURL(self): 
+    return "../Images/" + self.toString() + ".png"
+
+   # Return relative URL of back of self (or any) card 
+   # (assumes certain folder structure).
+  def getBackURL(self):
+    return "../Images/cardback.png"
+
 
 # if (typeof module === "object") {
 #  module.exports = Card;

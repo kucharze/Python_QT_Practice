@@ -2,16 +2,14 @@
 
 # const Card = require("./Card");
 class Deck:
-  // Instance variable:
-  //   list: Deck of cards (array of Card objects)
+  # Instance variable:
+  #   list: Deck of cards (array of Card objects)
 
-  /**
-   * Initialize deck to represent regular 52 playing cards.
-   */
-  constructor() {
-    this.list = new Array();
-    let suit = ["c", "d", "h", "s"];
-    let value = [
+   # Initialize deck to represent regular 52 playing cards.
+  def __init__(self):
+    self.list = []
+    suit = ["c", "d", "h", "s"];
+    value = [
       "2",
       "3",
       "4",
@@ -25,57 +23,51 @@ class Deck:
       "q",
       "k",
       "a",
-    ];
-    for (let i = 0; i < suit.length; i++) {
-      for (let j = 0; j < value.length; j++) {
-        this.list.push(new Card(suit[i], value[j]));
-      }
-    }
-  }
-  /*
-   * Shuffle the deck.
-   */
-  shuffle() {
-    for (let n = this.list.length; n >= 2; n--) {
+    ]
+    for i in range(len(suit)): #(let i = 0; i < suit.length; i++):
+     
+      for j in range(len(value)): # (let j = 0; j < value.length; j++):
+        # self.list.push(new Card(suit[i], value[j]));
+        pass
+      
+    
+  
+   # Shuffle the deck.
+  def shuffle() {
+    for (let n = self.list.length; n >= 2; n--) {
       let r = Math.floor(Math.random() * n);
       // Swap cards at r and n-1
-      let card = this.list[r];
-      this.list[r] = this.list[n - 1];
-      this.list[n - 1] = card;
+      let card = self.list[r];
+      self.list[r] = self.list[n - 1];
+      self.list[n - 1] = card;
     }
   }
-  /**
-   * Remove top card from the deck and return it.
-   */
-  dealACard() {
-    return this.list.shift();
-  }
+    
 
-  getSize() {
-    return this.list.length;
-  }
+   # Remove top card from the deck and return it.
+  def dealACard(self):
+    return self.list.shift();
+  
 
-  /**
-   * Determines if the deck is empty.
-   */
-  isEmpty() {
-    return this.list.length == 0;
-  }
+  def getSize(self):
+    return self.list.length;
 
-  /**
-   * Adds a card to the deck.
-   */
-  addACard(card) {
-    this.list.push(card);
-  }
-  /**
-   * Indicate whether or not top card of deck is an 8.
-   * This method is intended to be used only during game
-   * initialization to avoid starting the pile with an 8.
-   */
-  isTopCardAnEight() {
-    return this.list[0].getValue() == "8";
-  }
+
+   # Determines if the deck is empty.
+  def isEmpty(self):
+    return self.list.length == 0;
+  
+   # Adds a card to the deck.
+  def addACard(self,card):
+    self.list.push(card);
+  
+  
+   # Indicate whether or not top card of deck is an 8.
+   # self method is intended to be used only during game
+   # initialization to avoid starting the pile with an 8.
+  def isTopCardAnEight(self):
+    return self.list[0].getValue() == "8";
+  
 
 # if (typeof module === "object") {
 #   module.exports = Deck;
